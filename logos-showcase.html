@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Options — Abhishek Singh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:      #0b1522;
+      --bg-alt:  #0f1d30;
+      --border:  #1e3352;
+      --text:    #ede8df;
+      --muted:   #7a95b4;
+      --faint:   #3d5570;
+      --accent:  #c49a3c;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'Lora', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      padding: 0 0 80px;
+    }
+
+    /* ── Page header ─────────────────────────────────────── */
+    .page-header {
+      padding: 60px 60px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 1rem;
+    }
+    .page-label::before {
+      content: '';
+      display: block;
+      width: 1.8rem;
+      height: 1px;
+      background: var(--accent);
+    }
+    .page-title {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+    }
+    .page-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── Logo section ────────────────────────────────────── */
+    .logo-section {
+      padding: 56px 60px;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo-section:last-child { border-bottom: none; }
+
+    .logo-section-header {
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+    }
+    .logo-option-num {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--border);
+      line-height: 1;
+    }
+    .logo-option-info {}
+    .logo-option-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+    .logo-option-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.65;
+      max-width: 560px;
+    }
+
+    /* ── Preview row ─────────────────────────────────────── */
+    .preview-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5px;
+      background: var(--border);
+    }
+
+    .preview-box {
+      padding: 48px 52px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+    .preview-dark  { background: #0b1522; }
+    .preview-light { background: #f5f0e8; }
+
+    .preview-box svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .preview-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .preview-dark  .preview-label { color: var(--faint); }
+    .preview-light .preview-label { color: #8a9aaa; }
+
+    /* ── Light-background color overrides ───────────────── */
+    /* Overrides SVG presentation attributes for text fills  */
+    .preview-light .logo-name { fill: #0b1522; }
+    .preview-light .logo-sub  { fill: #506878; }
+    .preview-light .v2-first  { fill: #0b1522; }
+    .preview-light .v2-last   { fill: #9a7828; }
+    .preview-light .v2-creds  { fill: #506878; }
+    /* Divider line: amber stays amber on both backgrounds */
+    /* Amber rule rect: stays amber on both backgrounds     */
+
+    /* ── Notes ──────────────────────────────────────────── */
+    .notes-section {
+      padding: 48px 60px 0;
+    }
+    .notes-title {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .notes-title::before {
+      content: '';
+      display: block;
+      width: 1.8rem;
+      height: 1px;
+      background: var(--accent);
+    }
+    .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--border);
+    }
+    .note-card {
+      background: var(--bg-alt);
+      padding: 1.8rem;
+    }
+    .note-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .note-card p {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 800px) {
+      .page-header, .logo-section, .notes-section { padding: 32px 24px; }
+      .preview-row { grid-template-columns: 1fr; }
+      .notes-grid  { grid-template-columns: 1fr; }
+      .logo-section-header { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────── -->
+  <header class="page-header">
+    <div class="page-label">Brand Identity Review</div>
+    <h1 class="page-title">Logo Options</h1>
+    <p class="page-sub">Two directions for review — mark + wordmark and typographic. Each shown on dark and light backgrounds.</p>
+  </header>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!-- LOGO V1 — Mark + Wordmark                           -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section class="logo-section">
+    <div class="logo-section-header">
+      <div class="logo-option-num">01</div>
+      <div class="logo-option-info">
+        <h2 class="logo-option-title">Mark + Wordmark</h2>
+        <p class="logo-option-desc">
+          A custom mark referencing piezometric surface contours — three concentric arcs
+          (groundwater head lines viewed from above) with a well casing below.
+          Amber mark, wide-tracked name in Cormorant Garamond, credentials in Lora.
+          Minimal and scalable down to small sizes.
+        </p>
+      </div>
+    </div>
+
+    <div class="preview-row">
+
+      <!-- Dark background -->
+      <div class="preview-box preview-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 90" role="img" aria-label="Abhishek Singh logo — dark background">
+          <title>Abhishek Singh, PhD, PE</title>
+          <path d="M 16,42 A 22,22 0 0 1 60,42" fill="none" stroke="#c49a3c" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M 23,42 A 15,15 0 0 1 53,42" fill="none" stroke="#c49a3c" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M 29,42 A 9,9 0 0 1 47,42"   fill="none" stroke="#c49a3c" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="14" y1="42" x2="62" y2="42" stroke="#c49a3c" stroke-width="0.5" opacity="0.25"/>
+          <line x1="38" y1="42" x2="38" y2="65" stroke="#c49a3c" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="34" y1="55" x2="42" y2="55" stroke="#c49a3c" stroke-width="0.9" stroke-linecap="round" opacity="0.65"/>
+          <line x1="34" y1="61" x2="42" y2="61" stroke="#c49a3c" stroke-width="0.9" stroke-linecap="round" opacity="0.65"/>
+          <circle cx="38" cy="42" r="2.4" fill="#c49a3c"/>
+          <line x1="80" y1="18" x2="80" y2="72" stroke="#c49a3c" stroke-width="0.55" opacity="0.3"/>
+          <text x="96" y="43" class="logo-name" font-family="'Cormorant Garamond', Palatino, Georgia, serif" font-size="20" font-weight="400" letter-spacing="4" fill="#ede8df">ABHISHEK SINGH</text>
+          <rect x="96" y="50" width="200" height="0.6" fill="#c49a3c" opacity="0.4"/>
+          <text x="96" y="65" class="logo-sub" font-family="'Lora', Georgia, serif" font-size="8.5" letter-spacing="1.8" fill="#7a95b4">PhD, PE  ·  Principal Engineer, Water Resources &amp; Supply</text>
+        </svg>
+        <span class="preview-label">On dark</span>
+      </div>
+
+      <!-- Light background -->
+      <div class="preview-box preview-light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 90" role="img" aria-label="Abhishek Singh logo — light background">
+          <title>Abhishek Singh, PhD, PE</title>
+          <path d="M 16,42 A 22,22 0 0 1 60,42" fill="none" stroke="#c49a3c" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M 23,42 A 15,15 0 0 1 53,42" fill="none" stroke="#c49a3c" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M 29,42 A 9,9 0 0 1 47,42"   fill="none" stroke="#c49a3c" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="14" y1="42" x2="62" y2="42" stroke="#c49a3c" stroke-width="0.5" opacity="0.3"/>
+          <line x1="38" y1="42" x2="38" y2="65" stroke="#c49a3c" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="34" y1="55" x2="42" y2="55" stroke="#c49a3c" stroke-width="0.9" stroke-linecap="round" opacity="0.65"/>
+          <line x1="34" y1="61" x2="42" y2="61" stroke="#c49a3c" stroke-width="0.9" stroke-linecap="round" opacity="0.65"/>
+          <circle cx="38" cy="42" r="2.4" fill="#c49a3c"/>
+          <line x1="80" y1="18" x2="80" y2="72" stroke="#c49a3c" stroke-width="0.55" opacity="0.35"/>
+          <text x="96" y="43" class="logo-name" font-family="'Cormorant Garamond', Palatino, Georgia, serif" font-size="20" font-weight="400" letter-spacing="4" fill="#0b1522">ABHISHEK SINGH</text>
+          <rect x="96" y="50" width="200" height="0.6" fill="#c49a3c" opacity="0.5"/>
+          <text x="96" y="65" class="logo-sub" font-family="'Lora', Georgia, serif" font-size="8.5" letter-spacing="1.8" fill="#506878">PhD, PE  ·  Principal Engineer, Water Resources &amp; Supply</text>
+        </svg>
+        <span class="preview-label">On light</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!-- LOGO V2 — Typographic                               -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section class="logo-section">
+    <div class="logo-section-header">
+      <div class="logo-option-num">02</div>
+      <div class="logo-option-info">
+        <h2 class="logo-option-title">Typographic</h2>
+        <p class="logo-option-desc">
+          Full name as the mark. "Abhishek" in large italic Cormorant Garamond —
+          the calligraphic weight of the font gives it a signature quality. An amber
+          rule divides the names. "SINGH" tracked wide and right-anchored, creating
+          deliberate scale contrast. No icon needed.
+        </p>
+      </div>
+    </div>
+
+    <div class="preview-row">
+
+      <!-- Dark background -->
+      <div class="preview-box preview-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 108" role="img" aria-label="Abhishek Singh typographic logo — dark background">
+          <title>Abhishek Singh, PhD, PE</title>
+          <text x="6" y="58" class="v2-first"
+            font-family="'Cormorant Garamond', Palatino, Georgia, serif"
+            font-size="50" font-style="italic" font-weight="400" fill="#ede8df">Abhishek</text>
+          <rect x="6" y="65" width="240" height="0.75" fill="#c49a3c"/>
+          <text x="246" y="82" text-anchor="end" class="v2-last"
+            font-family="'Cormorant Garamond', Palatino, Georgia, serif"
+            font-size="12.5" font-weight="400" letter-spacing="13" fill="#c49a3c">SINGH</text>
+          <text x="6" y="98" class="v2-creds"
+            font-family="'Lora', Georgia, serif"
+            font-size="7.5" letter-spacing="1.4" fill="#7a95b4">PhD, PE  ·  Principal Engineer, Water Resources  ·  INTERA</text>
+        </svg>
+        <span class="preview-label">On dark</span>
+      </div>
+
+      <!-- Light background -->
+      <div class="preview-box preview-light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 108" role="img" aria-label="Abhishek Singh typographic logo — light background">
+          <title>Abhishek Singh, PhD, PE</title>
+          <text x="6" y="58" class="v2-first"
+            font-family="'Cormorant Garamond', Palatino, Georgia, serif"
+            font-size="50" font-style="italic" font-weight="400" fill="#0b1522">Abhishek</text>
+          <rect x="6" y="65" width="240" height="0.75" fill="#c49a3c"/>
+          <text x="246" y="82" text-anchor="end" class="v2-last"
+            font-family="'Cormorant Garamond', Palatino, Georgia, serif"
+            font-size="12.5" font-weight="400" letter-spacing="13" fill="#9a7828">SINGH</text>
+          <text x="6" y="98" class="v2-creds"
+            font-family="'Lora', Georgia, serif"
+            font-size="7.5" letter-spacing="1.4" fill="#506878">PhD, PE  ·  Principal Engineer, Water Resources  ·  INTERA</text>
+        </svg>
+        <span class="preview-label">On light</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ── Usage notes ─────────────────────────────────────── -->
+  <section class="notes-section">
+    <div class="notes-title">Usage notes</div>
+    <div class="notes-grid">
+
+      <div class="note-card">
+        <h4>Option 1 — When to use</h4>
+        <p>
+          Best for: website nav, email signatures, presentation headers,
+          anywhere the mark + name together read clearly. The icon is distinctive
+          enough to stand alone at larger sizes once the brand is established.
+        </p>
+      </div>
+
+      <div class="note-card">
+        <h4>Option 2 — When to use</h4>
+        <p>
+          Best for: proposal covers, conference materials, LinkedIn banner,
+          professional documents. The italic signature quality gives it authority
+          without an icon. Works well large — less ideal at small sizes.
+        </p>
+      </div>
+
+      <div class="note-card">
+        <h4>Colors used</h4>
+        <p>
+          Amber/brass <strong style="color:#c49a3c">#c49a3c</strong> — mark &amp; accent.<br>
+          Warm ivory <strong style="color:#ede8df">#ede8df</strong> — primary text on dark.<br>
+          Dark navy <strong style="color:#7a95b4">#0b1522</strong> — primary text on light.<br>
+          Slate <strong style="color:#7a95b4">#7a95b4</strong> — credentials, secondary.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

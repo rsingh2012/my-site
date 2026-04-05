@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(taskkill /F /IM node.exe)",
+      "Bash(echo \"Kill result: $?\")",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(node server.js)",
+      "Bash(netstat -ano)",
+      "Bash(gh repo:*)"
+    ]
+  }
+}
