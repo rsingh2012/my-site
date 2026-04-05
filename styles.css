@@ -142,7 +142,7 @@ ul { list-style: none; }
   opacity: 0.78;
 }
 .nav-logo-svg {
-  height: 40px;
+  height: 58px;
   width: auto;
   display: block;
 }
@@ -154,10 +154,9 @@ ul { list-style: none; }
 }
 .nav-intera-link:hover { opacity: 1; }
 .nav-intera-logo {
-  height: 22px;
+  height: 40px;
   width: auto;
   display: block;
-  filter: brightness(0) invert(1);
 }
 
 .nav-links {
@@ -942,11 +941,10 @@ footer {
 }
 .footer-intera-link:hover { opacity: 0.8; }
 .footer-intera-logo {
-  height: 28px;
+  height: 40px;
   width: auto;
   display: block;
-  filter: brightness(0) invert(1);
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 .footer-links {
